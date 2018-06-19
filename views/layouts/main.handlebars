@@ -1,0 +1,20 @@
+ul>
+  {{#each newspaper}}
+    <li>
+      <p>Title: {{title}}</p>
+      <p>summary: {{summary}}</p>
+      <p>url: {{url}}</p>
+    </li>
+  {{/each}}
+</ul>
+
+<form action="/" method="post">
+  <input type="text" name="wish" />
+  <button type="submit">submit</button>
+</form>
+
+
+<form action="/" method="post">
+  <input type="text" name="wish" />
+  <button type="submit">update</button>
+</form>
