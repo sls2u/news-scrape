@@ -19,19 +19,6 @@
   var databaseUrl = "scraper";
   var collections = ["scrapeData"];
 
-  //Data
-  var news = [{
-    headline:{},{
-      body: {},{
-        url:{}{
-
-        }
-      }
-    }
-  }];
-
-
-
 
   app.use(express.static("public"));
   // Hook mongojs configuration to the db variable
@@ -42,7 +29,9 @@
 
   // Main route (simple Hello World Message)
   app.get("/", function(req, res) {
-    res.send(index.html);
+    //res.send(index.html);
+    console.log('hello')
+     res.render('home');
   });
 
   // Retrieve data from the db
