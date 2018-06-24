@@ -2,6 +2,7 @@
   var request = require("request");
   var express = require("express");
   var mongojs = require("mongojs");
+  var mongoose = require('mongoose');
   var exphbs = require('express-handlebars');
 
   // Initialize Express
@@ -26,12 +27,17 @@
   db.on("error", function(error) {
     console.log("Database Error:", error);
   });
+  // Main route (saved page)
+  app.get("/saved", function(req, res, err) {
+    console.log(err)
+     res.render('saved');
+  });
 
-  // Main route (simple Hello World Message)
-  app.get("/", function(req, res) {
+  // Main route (home page)
+  app.get("/", function(req, res, err) {
     //res.send(index.html);
-    console.log('hello')
-     res.render('home');
+    console.log(err)
+     res.render('index.html');
   });
 
   // Retrieve data from the db
